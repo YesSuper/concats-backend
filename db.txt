@@ -1,0 +1,4 @@
+DB_HOST=sql12.freesqldatabase.com
+DB_USER=sql12806413
+DB_PASS=HnWUzyGg88
+DB_NAME=sql12806413
