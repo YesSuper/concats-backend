@@ -1,6 +1,4 @@
-// 引入所需模块
-require('dotenv').config();  // 读取 .env 文件
-const mysql = require('mysql');
+const mysql = require('mysql');  
 const cors = require('cors');
 const express = require('express');
 const app = express();
@@ -12,10 +10,10 @@ app.use(cors());  // 解决跨域问题
 
 // 配置 MySQL 数据库连接
 const connection = mysql.createConnection({
-    host: process.env.DB_HOST,  // 从环境变量中读取 host
-    user: process.env.DB_USER,  // 从环境变量中读取 user
-    password: process.env.DB_PASS,  // 从环境变量中读取 password
-    database: process.env.DB_NAME  // 从环境变量中读取 database
+    host: 'localhost',  // 本地数据库地址
+    user: 'root',       // 本地数据库用户名
+    password: '123456', // 本地数据库密码
+    database: 'contacts_db'  // 本地使用的数据库名
 });
 
 // 连接到数据库
